@@ -6,19 +6,20 @@ const routes = [
   {
     path: "/",
     name: "list",
-    component: () => import("../components/CountriesList.vue"),
+    component: CountriesList,
     children: [
       {
         path: "list/:alpha3Code",
         name: "listdetails",
-        component: () => import("../components/CountryDetails.vue"),
+        component: CountryDetails,
+        props: true
       },
     ],
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory("/"),
+  history: createWebHistory(),
   routes,
   scrollBehavior() {
     document.getElementById("app").scrollIntoView();

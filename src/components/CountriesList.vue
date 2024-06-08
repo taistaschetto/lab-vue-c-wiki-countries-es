@@ -1,4 +1,5 @@
 <template>
+  <router-view />
   <div class="countries-list">
     <ul class="list-group">
       <li
@@ -11,6 +12,7 @@
         }}</router-link>
       </li>
     </ul>
+    
   </div>
 </template>
 
